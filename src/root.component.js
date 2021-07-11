@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Button as ImpButton } from "@navbar/shared-components";
 
-const Button = styled.button`
+const NavButton = styled.button`
   cursor: pointer;
   background: blue;
   outline: none;
@@ -27,14 +28,15 @@ const Root = (props) => {
     <>
       <NavBar>
         <span>{props.name} Vorseek app &#169;</span>
-        <Button
+        <NavButton
           type="button"
           onClick={() => {
             props.singleSpa.navigateToUrl("/app");
           }}
         >
           Go to URL 'APP'
-        </Button>
+        </NavButton>
+        <ImpButton>Кнопка из другого приложения</ImpButton>
       </NavBar>
     </>
   );
